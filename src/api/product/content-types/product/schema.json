@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Hafalan",
+        "Tilawah",
+        "Tematik"
+      ]
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "product_variants": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product-variant.product-variant",
+      "mappedBy": "product_id"
+    },
+    "product_variant_colors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product-variant-color.product-variant-color",
+      "mappedBy": "product_id"
+    },
+    "transaction_items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::transaction-item.transaction-item",
+      "mappedBy": "product_id"
+    },
+    "carts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::cart.cart",
+      "mappedBy": "product_id"
+    }
+  }
+}

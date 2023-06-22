@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_variant_colors",
+  "info": {
+    "singularName": "product-variant-color",
+    "pluralName": "product-variant-colors",
+    "displayName": "Product Variant Color",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "color": {
+      "type": "string"
+    },
+    "product_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product.product",
+      "inversedBy": "product_variant_colors"
+    },
+    "transaction_items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::transaction-item.transaction-item",
+      "mappedBy": "product_variant_color"
+    },
+    "carts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::cart.cart",
+      "mappedBy": "product_variant_color"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "transaction_items",
+  "info": {
+    "singularName": "transaction-item",
+    "pluralName": "transaction-items",
+    "displayName": "Transaction Item",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "product_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product.product",
+      "inversedBy": "transaction_items"
+    },
+    "transaction": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::transaction.transaction",
+      "inversedBy": "transaction_items"
+    },
+    "quantity": {
+      "type": "integer"
+    },
+    "price": {
+      "type": "biginteger"
+    },
+    "product_variant": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product-variant.product-variant",
+      "inversedBy": "transaction_items"
+    },
+    "product_variant_color": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product-variant-color.product-variant-color",
+      "inversedBy": "transaction_items"
+    }
+  }
+}
