@@ -13,7 +13,7 @@
   "pluginOptions": {},
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "text"
     },
     "category": {
       "type": "enumeration",
@@ -30,25 +30,25 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::product-variant.product-variant",
-      "mappedBy": "product_id"
+      "mappedBy": "product"
     },
     "product_variant_colors": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::product-variant-color.product-variant-color",
-      "mappedBy": "product_id"
+      "mappedBy": "product"
     },
     "transaction_items": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::transaction-item.transaction-item",
-      "mappedBy": "product_id"
+      "mappedBy": "product"
     },
-    "carts": {
+    "transactions": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::cart.cart",
-      "mappedBy": "product_id"
+      "target": "api::transaction.transaction",
+      "mappedBy": "product"
     }
   }
 }

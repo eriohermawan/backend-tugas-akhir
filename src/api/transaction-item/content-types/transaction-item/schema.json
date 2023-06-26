@@ -12,12 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "product_id": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::product.product",
-      "inversedBy": "transaction_items"
-    },
     "transaction": {
       "type": "relation",
       "relation": "manyToOne",
@@ -40,6 +34,12 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::product-variant-color.product-variant-color",
+      "inversedBy": "transaction_items"
+    },
+    "product": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product.product",
       "inversedBy": "transaction_items"
     }
   }

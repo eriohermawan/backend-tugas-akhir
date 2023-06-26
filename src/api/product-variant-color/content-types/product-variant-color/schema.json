@@ -15,12 +15,6 @@
     "color": {
       "type": "string"
     },
-    "product_id": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::product.product",
-      "inversedBy": "product_variant_colors"
-    },
     "transaction_items": {
       "type": "relation",
       "relation": "oneToMany",
@@ -32,6 +26,12 @@
       "relation": "oneToMany",
       "target": "api::cart.cart",
       "mappedBy": "product_variant_color"
+    },
+    "product": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product.product",
+      "inversedBy": "product_variant_colors"
     }
   }
 }

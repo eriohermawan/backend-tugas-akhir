@@ -11,12 +11,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "product_id": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::product.product",
-      "inversedBy": "carts"
-    },
     "product_variant": {
       "type": "relation",
       "relation": "manyToOne",
