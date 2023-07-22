@@ -49,6 +49,16 @@
       "relation": "oneToMany",
       "target": "api::transaction.transaction",
       "mappedBy": "product"
+    },
+    "images": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }
