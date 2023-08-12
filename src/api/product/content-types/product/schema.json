@@ -59,10 +59,22 @@
         "files",
         "videos",
         "audios"
+<<<<<<< HEAD
       ]
     },
     "stock": {
       "type": "biginteger"
+=======
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "cart": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::cart.cart",
+      "inversedBy": "products"
+>>>>>>> ed5d98a51d3858d58457ffe510f77bb85c48fd00
     }
   }
 }
