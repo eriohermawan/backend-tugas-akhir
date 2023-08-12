@@ -30,12 +30,6 @@
       "target": "api::cart.cart",
       "mappedBy": "product_variant"
     },
-    "produk": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::produk.produk",
-      "inversedBy": "product_variants"
-    },
     "product": {
       "type": "relation",
       "relation": "manyToOne",
