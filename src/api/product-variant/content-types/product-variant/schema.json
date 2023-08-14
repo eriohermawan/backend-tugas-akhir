@@ -35,6 +35,9 @@
       "relation": "manyToOne",
       "target": "api::product.product",
       "inversedBy": "product_variants"
+    },
+    "weight": {
+      "type": "integer"
     }
   }
 }
