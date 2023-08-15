@@ -99,6 +99,9 @@
       "relation": "oneToMany",
       "target": "api::cart.cart",
       "mappedBy": "users_permissions_user"
+    },
+    "fullname": {
+      "type": "string"
     }
   }
 }
