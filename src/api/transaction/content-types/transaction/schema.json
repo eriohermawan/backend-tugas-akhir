@@ -42,17 +42,28 @@
       "target": "api::transaction-item.transaction-item",
       "mappedBy": "transaction"
     },
-    "proof_of_payment": {
-      "type": "string"
-    },
     "paid_at": {
       "type": "datetime"
     },
-    "product": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::product.product",
-      "inversedBy": "transactions"
+    "name_payment": {
+      "type": "string"
+    },
+    "bank_payment": {
+      "type": "string"
+    },
+    "rek_payment": {
+      "type": "string"
+    },
+    "proof_of_payment": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }

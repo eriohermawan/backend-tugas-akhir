@@ -44,12 +44,6 @@
       "target": "api::transaction-item.transaction-item",
       "mappedBy": "product"
     },
-    "transactions": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::transaction.transaction",
-      "mappedBy": "product"
-    },
     "images": {
       "type": "media",
       "multiple": true,
