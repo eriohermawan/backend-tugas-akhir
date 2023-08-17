@@ -33,9 +33,6 @@
     "shipment_price": {
       "type": "biginteger"
     },
-    "status": {
-      "type": "string"
-    },
     "transaction_items": {
       "type": "relation",
       "relation": "oneToMany",
@@ -63,6 +60,15 @@
         "files",
         "videos",
         "audios"
+      ]
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "BELUM DIPROSES",
+        "DIPROSES",
+        "DIKIRIM",
+        "SELESAI"
       ]
     }
   }
