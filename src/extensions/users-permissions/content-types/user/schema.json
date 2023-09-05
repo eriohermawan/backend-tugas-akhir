@@ -102,6 +102,12 @@
     },
     "fullname": {
       "type": "string"
+    },
+    "cart_item": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cart-item.cart-item",
+      "mappedBy": "users_permissions_user"
     }
   }
 }

@@ -55,9 +55,9 @@
         "audios"
       ]
     },
-    "cart": {
+    "carts": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::cart.cart",
       "inversedBy": "products"
     }
