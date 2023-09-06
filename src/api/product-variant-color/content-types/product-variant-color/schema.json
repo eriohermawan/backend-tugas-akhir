@@ -27,9 +27,9 @@
       "target": "api::cart.cart",
       "mappedBy": "product_variant_color"
     },
-    "product": {
+    "products": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::product.product",
       "inversedBy": "product_variant_colors"
     }

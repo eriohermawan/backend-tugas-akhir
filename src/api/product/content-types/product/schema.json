@@ -32,12 +32,6 @@
       "target": "api::product-variant.product-variant",
       "mappedBy": "product"
     },
-    "product_variant_colors": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::product-variant-color.product-variant-color",
-      "mappedBy": "product"
-    },
     "transaction_items": {
       "type": "relation",
       "relation": "oneToMany",
@@ -60,6 +54,12 @@
       "relation": "manyToMany",
       "target": "api::cart.cart",
       "inversedBy": "products"
+    },
+    "product_variant_colors": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product-variant-color.product-variant-color",
+      "mappedBy": "products"
     }
   }
 }
